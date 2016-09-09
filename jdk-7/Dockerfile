@@ -11,8 +11,8 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
-COPY jdk-7/mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh
-COPY jdk-7/settings-docker.xml /usr/share/maven/ref/
+COPY mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh
+COPY settings-docker.xml /usr/share/maven/ref/
 
 VOLUME "$USER_HOME_DIR/.m2"
 
